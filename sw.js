@@ -1,5 +1,5 @@
 // Versioned, self-contained offline bundle. Bump CACHE for each release.
-const CACHE='og-rooms-standalone-github-122e15e242620984';
+const CACHE='og-rooms-standalone-github-8c52b834dd259d72';
 const ASSETS=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./apple-touch-icon.png'];
 const assetPaths=new Set(ASSETS.map(path=>new URL(path,self.location.href).pathname));
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
